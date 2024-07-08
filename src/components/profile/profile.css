@@ -1,0 +1,75 @@
+.profile{
+    background: rgb(255, 170, 0);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.me{
+    display: flex;
+    align-items: center;
+
+}
+.elon{
+    width: 60%;
+    border-radius: 20px;
+}
+.elon-text{
+    font-size: 60px;
+    font-weight: 900;
+    margin-left: 40px;
+}
+.posts{
+    margin: 30px;
+}
+.posts-text{
+    font-size: 30px;
+    font-weight: 600;
+}
+input{
+    height: 30px;
+    width: 300px;
+    font-size: 20px;
+}
+button{
+    height: 35px;
+    width: 150px;
+    margin-left: 30px;
+    background: rgb(0, 162, 220);
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+button:hover{
+    background: rgb(210, 0, 0);
+}
+.post{
+    display: flex;
+    margin: 30px 0;
+}
+.elonmini{
+    width: 20%;
+    margin-right: 30px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+span{
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 40px;
+    width: 115px;
+}
+.text{
+    margin-top: 65px;
+    margin-left: -100px;
+}
+.dialog{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-areas: "n n a a a";
+}
+.name{
+    grid-area: n;
+}
+.answer{
+    grid-area: a;
+}
