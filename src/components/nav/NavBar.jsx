@@ -1,11 +1,12 @@
 import React from "react"
 import "./nav.css"
+// import {NavLink} from "react-router-dom"
 function NavBar() {
     return(
       <div className="nav">
-        <a className="nav-profile">Profile</a>
-        <a className="nav-messages">Messages</a>
-        <a className="nav-users">Users</a>
+        {/* <NavLink className="nav-profile">Profile</NavLink>
+        <NavLink className="nav-profile">Messages</NavLink>
+        <NavLink className="nav-profile">Users</NavLink> */}
       </div>
     )
 }
