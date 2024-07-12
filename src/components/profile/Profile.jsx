@@ -7,7 +7,7 @@ function Profile(props) {
     return(
       <div className="profile">
         <div className="me">
-          <img className="elon" src={elon} />
+          <img className="elon" src={elon} alt="" />
           <p className="elon-text">{props.name}</p>
         </div>
         <Posts message={props.message} answer={props.answer} name={props.name} />
