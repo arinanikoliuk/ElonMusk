@@ -1,12 +1,14 @@
 .container{
-    width: 25%;
+    width: 100%;
     height: 150px;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
 }
 .cont_image{
-    width: 100%;
-    height: 100%;
+    width: 25%;
 }
-.cont_text{
+.text2{
     font-size: 30px;
     font-weight: 900;
     color: white;

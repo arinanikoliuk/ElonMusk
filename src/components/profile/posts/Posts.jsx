@@ -1,5 +1,5 @@
 import React from "react"
-import Dialog from "../../dialog/Dialog"
+import Dialog from "../../dialogs/Dialogs"
 import Post from "./post/Post"
 import Post2 from "./post2/Post2"
 import cat1 from "./post2/img/cat1.webp"
@@ -13,13 +13,13 @@ function Posts() {
             <input placeholder="enter the post" />
             <button>Add post</button>
             <Post message="My name is Elon Musk and I create rockets with my company. Soon we are planning to go to expedition on a Mars" />
-            <Dialog name="Mark Zuckerberg" />
+            {/* <Dialog name="Mark Zuckerberg" />
             <Dialog name="Elon Musk" />
-            <Dialog name="Bill Gates" />
-            <Post2 imageSrc={cat1} />
-            <Post2 imageSrc={cat3} />
-            <Post2 imageSrc={cat2} />
-            <Post2 imageSrc={cat4} />
+            <Dialog name="Bill Gates" /> */}
+            <Post2 names="Meinkoon" imageSrc={cat1} />
+            <Post2 names="Serval" imageSrc={cat3} />
+            <Post2 names="Sfinks" imageSrc={cat2} />
+            <Post2 names="Bengal" imageSrc={cat4} />
         </div>
     )
 }

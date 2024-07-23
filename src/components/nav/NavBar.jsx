@@ -1,12 +1,15 @@
 import React from "react"
 import "./nav.css"
-// import {NavLink} from "react-router-dom"
+import {Link} from "react-router-dom"
 function NavBar() {
     return(
       <div className="nav">
-        {/* <NavLink className="nav-profile">Profile</NavLink>
-        <NavLink className="nav-profile">Messages</NavLink>
-        <NavLink className="nav-profile">Users</NavLink> */}
+        <Link to="/profile" className="nav-profile">Profile</Link>
+        <Link to="/messages" className="nav-profile">Messages</Link>
+        <Link to="/users" className="nav-profile">Users</Link>
+        <Link to="/dialogs" className="nav-profile">Dialogs</Link> 
+        <Link to="/feed" className="nav-profile">Feed</Link>
+        <Link to="/friends" className="nav-profile">Friends</Link>
       </div>
     )
 }
