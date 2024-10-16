@@ -6,6 +6,7 @@ function Post(props) {
             <img className="elonmini" src={elonmini} />
             <span>Elon Mask</span>
             <p className="text">{props.message}</p>
+            <span>{props.likes} likes</span>
         </div>
     )
 }
