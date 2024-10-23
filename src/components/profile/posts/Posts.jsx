@@ -11,6 +11,12 @@ let post1_data=[
     {text:"My rockets are explaining Mars", id:2, likes:345},
     {text:"Tesla is the best car you can have", id:3, likes:159}
 ]
+let catNamedescription = [
+    {imageSrc: cat1, names:"Meikoon", description:"This cat is very big", id:1},
+    {imageSrc: cat3, names:"Serval", description:"This cat is very big", id:2},
+    {imageSrc: cat2, names:"Sfinks", description:"This cat is very big", id:3},
+    {imageSrc: cat4, names:"Bengal", description:"This cat is very big", id:1}
+]
 function Posts() {
     return(
 
@@ -20,13 +26,14 @@ function Posts() {
             <button>Add post</button>
             {/* <Post message="My name is Elon Musk and I create rockets with my company. Soon we are planning to go to expedition on a Mars" /> */}
             {post1_data.map((e)=> <Post message={e.text} id={e.id} likes={e.likes}/>)}
+            {catNamedescription.map((e)=> <Post2 imageSrc={e.imageSrc} names={e.names} description={e.description} id={e.id}/>)}
             {/* <Dialog name="Mark Zuckerberg" />
             <Dialog name="Elon Musk" />
             <Dialog name="Bill Gates" /> */}
-            <Post2 names="Meinkoon" imageSrc={cat1} />
+            {/* <Post2 names="Meinkoon" imageSrc={cat1} />
             <Post2 names="Serval" imageSrc={cat3} />
             <Post2 names="Sfinks" imageSrc={cat2} />
-            <Post2 names="Bengal" imageSrc={cat4} />
+            <Post2 names="Bengal" imageSrc={cat4} /> */}
         </div>
     )
 }

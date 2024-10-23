@@ -5,8 +5,8 @@ function Post2 (props) {
         <div className="container">
             <img className="cont_image" src={props.imageSrc} alt="" /> 
             <div className="content">
-                <span>Krasivii Kotik</span>   
                 <h1 className="text2">{props.names}</h1>
+                <p className="description">{props.description}</p>
             </div>
         </div>
         
