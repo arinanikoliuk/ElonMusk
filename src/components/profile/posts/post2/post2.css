@@ -8,8 +8,20 @@
 .cont_image{
     width: 25%;
 }
-.text2{
+.title{
+    margin-top: 0;
     font-size: 30px;
     font-weight: 900;
-    color: white;
+    color: rgb(255, 255, 255);
+}
+.description{
+    width: 100%;
+    color: black;
+    text-align: justify;
+}
+.content{
+    background: rgb(255, 149, 0);
+    width: 500px;
+    padding: 15px;
+    border: 1px solid black;
 }
