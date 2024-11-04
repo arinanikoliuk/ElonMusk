@@ -1,27 +1,26 @@
 import React from "react"
-import Dialog from "../../dialogs/Dialogs"
+// import Dialog from "../../dialogs/Dialogs"
 import Post from "./post/Post"
 import Post2 from "./post2/Post2"
-import cat1 from "./post2/img/cat1.webp"
-import cat2 from "./post2/img/cat2.jpg"
-import cat3 from "./post2/img/cat3.jpeg"
-import cat4 from "./post2/img/cat4.png"
-let catNamedescription = [
-    {imageSrc: cat1, names:"Meikoon", description:"Meikoon is one of the largest domesticated cats. It can weight 4-8 kg and measure long 50-100cm", id:1},
-    {imageSrc: cat3, names:"Serval", description:"African servals are small, slender cats with long legs, a lean body, a short tail, and a small head. Their extra-long neck and legs give them the nickname-giraffe cat", id:2},
-    {imageSrc: cat2, names:"Sfinks", description:"Sphynx was developed through selective breeding of these animals, starting in the 1960s. They always have cold", id:3},
-    {imageSrc: cat4, names:"Bengal", description:"Bengal cat is a breed of hybrid cat created from crossing of an Asian leopard cat with domestic cats, especially the spotted Egyptian Mau.This cats are very adorable and affectionate", id:1}
-]
+// import cat1 from "./post2/img/cat1.webp"
+// import cat2 from "./post2/img/cat2.jpg"
+// import cat3 from "./post2/img/cat3.jpeg"
+// import cat4 from "./post2/img/cat4.png"
+// let catNamedescription = [
+//     {imageSrc: cat1, names:"Meikoon", description:"Meikoon is one of the largest domesticated cats. It can weight 4-8 kg and measure long 50-100cm", id:1},
+//     {imageSrc: cat3, names:"Serval", description:"African servals are small, slender cats with long legs, a lean body, a short tail, and a small head. Their extra-long neck and legs give them the nickname-giraffe cat", id:2},
+//     {imageSrc: cat2, names:"Sfinks", description:"Sphynx was developed through selective breeding of these animals, starting in the 1960s. They always have cold", id:3},
+//     {imageSrc: cat4, names:"Bengal", description:"Bengal cat is a breed of hybrid cat created from crossing of an Asian leopard cat with domestic cats, especially the spotted Egyptian Mau.This cats are very adorable and affectionate", id:1}
+// ]
 function Posts(props) {
     return(
-
         <div className="posts">
             <h2 className="posts-text">My posts</h2>
             <input placeholder="enter the post" />
             <button>Add post</button>
             {/* <Post message="My name is Elon Musk and I create rockets with my company. Soon we are planning to go to expedition on a Mars" /> */}
             {props.post_data.map((e)=> <Post message={e.text} id={e.id} likes={e.likes}/>)}
-            {/* {props.catNamedescription.map((e)=> <Post2 imageSrc={e.imageSrc} names={e.names} description={e.description} id={e.id}/>)} */}
+            {props.description_cat.map((e)=> <Post2 imageSrc={e.imageSrc} names={e.names} description={e.description} id={e.id}/>)}
             {/* <Dialog name="Mark Zuckerberg" />
             <Dialog name="Elon Musk" />
             <Dialog name="Bill Gates" /> */}
