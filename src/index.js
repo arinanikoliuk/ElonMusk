@@ -10,10 +10,25 @@ let post1_data=[
   {text:"Tesla is the best car you can have", id:3, likes:159}
 ]
 
+let dialogs_data=[
+  {name:"Elon Musk", id:1},
+  {name:"Bill Geits", id:2},
+  {name:"Mark Cukenberg", id:3}
+]
+
+let messages_data=[
+  {message:"Go to Mars", id:1},
+  {message:"Where is my chip", id:2},
+  {message:"Hello", id:3},
+]
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App 
+      post1_data={post1_data}
+      // dialogNames={dialogNames}
+      // messages_data={messages_data} 
+    />
   </React.StrictMode>
 );
 

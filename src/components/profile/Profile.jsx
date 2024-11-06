@@ -8,7 +8,9 @@ function Profile(props) {
     return(
       <div className="profile">
         <Profileinfo/>
-        {/*  */}
+          <h2 className="posts-text">My posts</h2>
+          <input placeholder="enter the post" />
+          <button>Add post</button>
         <Posts post_data={props.post1_data}/>
         <Posts description_cat={props.description_cats}/>
         {/* <Posts message={props.message} answer={props.answer} name={props.name} /> */}

@@ -13,4 +13,4 @@ function Post2 (props) {
     )
 }
 
-export default Post2
+export default Post2;

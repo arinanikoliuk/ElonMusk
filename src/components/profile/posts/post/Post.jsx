@@ -4,9 +4,11 @@ function Post(props) {
     return(
         <div className="post">
             <img className="elonmini" src={elonmini} />
-            <span>Elon Mask</span>
-            <p className="text">{props.message}</p>
-            <span>{props.likes} likes</span>
+            <div className="description">
+                <span className="title">Elon Mask</span>
+                <p className="text">{props.message}</p> 
+            </div>
+            <span className="likes">{props.likes} likes</span>
         </div>
     )
 }
