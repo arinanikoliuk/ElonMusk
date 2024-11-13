@@ -14,17 +14,17 @@ let post1_data=[
   {text:"Tesla is the best car you can have", id:3, likes:159}
 ]
 
-// let dialogs_data=[
-//   {name:"Elon Musk", id:1},
-//   {name:"Bill Geits", id:2},
-//   {name:"Mark Cukenberg", id:3}
-// ]
+let dialogs_data=[
+  {name:"Elon Musk", id:1},
+  {name:"Bill Geits", id:2},
+  {name:"Mark Cukenberg", id:3}
+]
 
-// let messages_data=[
-//   {message:"Go to Mars", id:1},
-//   {message:"Where is my chip", id:2},
-//   {message:"Hello", id:3},
-// ]
+let messages_data=[
+  {message:"Go to Mars", id:1},
+  {message:"Where is my chip", id:2},
+  {message:"Hello", id:3},
+]
 let description_cats=[
   {imageSrc: cat1, names:"Meikoon", description:"Meikoon is one of the largest domesticated cats. It can weight 4-8 kg and measure long 50-100cm", id:1},
   {imageSrc: cat3, names:"Serval", description:"African servals are small, slender cats with long legs, a lean body, a short tail, and a small head. Their extra-long neck and legs give them the nickname-giraffe cat", id:2},
@@ -37,8 +37,8 @@ root.render(
     <App 
       post1_data={post1_data}
       description_cats={description_cats}
-      // dialogNames={dialogNames}
-      // messages_data={messages_data} 
+      dialogs_data={dialogs_data}
+      messages_data={messages_data} 
     />
   </React.StrictMode>
 );

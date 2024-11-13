@@ -32,7 +32,7 @@ function App(props) {
     <Routes>
       <Route path="/" element={<Profile description_cats={props.description_cats}/>} />
       <Route path="/profile" element={<Profile post1_data={props.post1_data}/>} />
-      <Route path="/dialogs" element={<Dialogs />} />
+      <Route path="/dialogs" element={<Dialogs dialogs_data={props.dialogs_data} messages_data={props.messages_data}  />} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/friends" element={<Friends />} />
     </Routes>
