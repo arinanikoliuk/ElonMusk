@@ -2,11 +2,14 @@ import cat1 from "../components/profile/posts/post2/img/cat1.webp"
 import cat2 from "../components/profile/posts/post2/img/cat2.jpg"
 import cat3 from "../components/profile/posts/post2/img/cat3.jpeg"
 import cat4 from "../components/profile/posts/post2/img/cat4.png"
+import spaceX from "../img/spaceX.avif"
+import rocket from "../img/rocket.jpg"
+import tesla from "../img/tesla.jpg"
 let state={
     post1_data:[
-        {text:"Space X is the best company", id:1, likes:121}, 
-        {text:"My rockets are explaining Mars", id:2, likes:345},
-        {text:"Tesla is the best car you can have", id:3, likes:159}
+        {image:spaceX, title:"The Company", text:"Space X is the best company in the world. Here we design the most necesary rockets, satelits and telescopes", id:1, likes:121}, 
+        {image:rocket, title:"About Rockets", text:"The rockets are explaining Mars. There are 151 total launches. The rockets of Elon Musk are expolring the space every day more and more ", id:2, likes:345},
+        {image:tesla, title:"Cars", text:"Tesla is the best car you can have. It does not contaminate the Earth because it is electric. In the world are 140500 people emloying Teslas", id:3, likes:159}
     ],
     dialogs_data:[
         {name:"Elon Musk", id:1},
