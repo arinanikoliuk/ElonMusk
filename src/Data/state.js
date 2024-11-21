@@ -25,5 +25,12 @@ let state={
         {imageSrc: cat4, names:"Bengal", description:"Bengal cat is a breed of hybrid cat created from crossing of an Asian leopard cat with domestic cats, especially the spotted Egyptian Mau.This cats are very adorable and affectionate", id:1}
     ]
 }
+export let addPost=(postText)=>{
+    let newPost ={
+        text:postText, id:4, likes:0
+    }
+    state.post1_data.push(newPost)
+    console.log(state)
+}
 
 export default state;
