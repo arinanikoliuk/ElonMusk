@@ -1,3 +1,4 @@
+import React from "react"
 import "./profile.css"
 // import elon from "../../img/elon.jpg"
 import Posts from "./posts/Posts"
