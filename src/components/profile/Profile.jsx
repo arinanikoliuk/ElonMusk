@@ -17,8 +17,8 @@ function Profile(props) {
           <h2 className="posts-text">My posts</h2>
           <input ref={postText} placeholder="enter the post" />
           <button onClick={addPost}>Add post</button>
-        <Posts post_data={props.post1_data} addPost={props.addPost}/>
-        <Posts description_cat={props.description_cats} addPost={props.addPost}/>
+        <Posts post_data={props.data.post1_data} addPost={props.addPost}/>
+        <Posts description_cat={props.data.description_cats} addPost={props.addPost}/>
         {/* <Posts message={props.message} answer={props.answer} name={props.name} /> */}
       </div>
     )
