@@ -29,4 +29,12 @@ let state={
     ]
 }
 
+export let addPost=(postText)=>{
+    let newPost ={
+        text:postText, id:4, likes:0
+    }
+    state.post1_data.push(newPost)
+    console.log(state)
+}
+
 export default state;
