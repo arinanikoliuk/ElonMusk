@@ -17,7 +17,7 @@ function Posts(props) {
         <div className="posts">
             {/* <Post message="My name is Elon Musk and I create rockets with my company. Soon we are planning to go to expedition on a Mars" /> */}
             
-            {props.post_data && props.post_data.map((e)=> <Post message={e.text} id={e.id} likes={e.likes}/>)}
+            {props.post_data && props.post_data.map((e)=> <Post image={e.image} title={e.title} message={e.text} id={e.id} likes={e.likes}/>)}
             {props.description_cat && props.description_cat.map((e)=> <Post2 imageSrc={e.imageSrc} names={e.names} description={e.description} id={e.id}/>)}
             {/* <Dialog name="Mark Zuckerberg" />
             <Dialog name="Elon Musk" />
