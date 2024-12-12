@@ -1,7 +1,7 @@
 import React from "react"
 import "./nav.css"
 import {Link} from "react-router-dom"
-function NavBar() {
+function NavBar(props) {
     return(
       <div className="nav">
         <Link to="/profile" className="nav-profile">Profile</Link>
@@ -10,6 +10,21 @@ function NavBar() {
         <Link to="/dialogs" className="nav-profile">Dialogs</Link> 
         <Link to="/feed" className="nav-profile">Feed</Link>
         <Link to="/friends" className="nav-profile">Friends</Link>
+        <div className="content_nav">
+          <p className="title">Friends:</p> 
+          <br />
+          <div className="avatar_content">
+            {props.navMenu.friends.map((e)=>{
+              return(
+                <Link to="/dialogs">
+                  <img src={e.ava} alt="cat"></img>
+                  <br/>
+                  <p className="text">{e.name}</p>
+                </Link>
+              ) 
+            })}
+          </div>
+        </div>
       </div>
     )
 }

@@ -27,7 +27,7 @@ function App(props) {
   <Router>
   <div className="wrapper">
     <Header />
-    <NavBar />
+    <NavBar navMenu={props.state.navMenu}/>
     {/* <Profile name={"Elon Musk"} /> */}
     <Routes>
       <Route path="/" element={<Profile description_cats={props.state.description_cats}/>} />
