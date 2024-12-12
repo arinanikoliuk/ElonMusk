@@ -12,7 +12,7 @@ function App(props) {
   <Router>
   <div className="wrapper">
     <Header />
-    <NavBar />
+    <NavBar navMenu={props.state.navMenu} />
     <Routes>
     <Route path="/" element={<Profile data={props.state.profile_page} addPost={props.addPost}/>} />
       <Route path="/profile" element={<Profile data={props.state.profile_page} addPost={props.addPost}/>} />

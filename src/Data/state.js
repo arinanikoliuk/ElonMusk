@@ -30,6 +30,13 @@ let state={
             {message:"Where is my chip", id:2},
             {message:"Hello", id:3},
         ]
+    },
+    navMenu: {
+        friends:[
+            {ava:cat1, name:"Eva", id:1},
+            {ava:cat2, name:"Mark", id:2},
+            {ava:cat3, name:"Sophia", id:3},
+        ]
     }
 }
 
@@ -37,7 +44,7 @@ export let addPost=(postText)=>{
     let newPost ={
         text:postText, id:4, likes:0
     }
-    state.profile_page.post1_data.push(newPost)
+    state.post1_data.push(newPost)
     console.log(state)
 }
 
