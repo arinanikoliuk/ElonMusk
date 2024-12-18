@@ -48,4 +48,12 @@ export let addPost=(postText)=>{
     console.log(state)
 }
 
+export let addMessage=(dialogsText)=>{
+    let newMessage ={
+        text:dialogsText, id:4
+    }
+    state.messages_data.push(newMessage)
+    console.log(state)
+}
+
 export default state;

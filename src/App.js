@@ -16,7 +16,7 @@ function App(props) {
     <Routes>
     <Route path="/" element={<Profile data={props.state.profile_page} addPost={props.addPost}/>} />
       <Route path="/profile" element={<Profile data={props.state.profile_page} addPost={props.addPost}/>} />
-      <Route path="/dialogs" element={<Dialogs dialog={props.state.dialogs_page} messages_data={props.state.messages_data}  />} />
+      <Route path="/dialogs" element={<Dialogs dialog={props.state.dialogs_page} messages_data={props.state.messages_data} addMessage={props.addMessage}/>} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/friends" element={<Friends />} />
     </Routes>
