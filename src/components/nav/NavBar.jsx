@@ -13,13 +13,14 @@ function NavBar(props) {
         <div className="content_nav">
           <p className="title">Friends:</p> 
           <br />
-          <div className="avatar_content">
+          <div className="avatar_container">
             {props.navMenu.friends.map((e)=>{
               return(
                 <Link to="/dialogs">
-                  <img src={e.ava} alt="cat"></img>
-                  <br/>
-                  <p className="text">{e.name}</p>
+                  <div className="avatar_content">
+                    <img src={e.ava} alt="cat"></img>
+                    <p className="text">{e.name}</p>
+                  </div>
                 </Link>
               ) 
             })}
