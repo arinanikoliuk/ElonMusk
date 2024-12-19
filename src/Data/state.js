@@ -44,7 +44,7 @@ export let addPost=(postText)=>{
     let newPost ={
         text:postText, id:4, likes:0
     }
-    state.post1_data.push(newPost)
+    state.profile_page.post1_data.push(newPost)
     console.log(state)
 }
 
@@ -52,7 +52,7 @@ export let addMessage=(dialogsText)=>{
     let newMessage ={
         text:dialogsText, id:4
     }
-    state.messages_data.push(newMessage)
+    state.dialogs_page.messages_data.push(newMessage)
     console.log(state)
 }
 
