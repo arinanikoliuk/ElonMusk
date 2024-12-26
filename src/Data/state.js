@@ -5,6 +5,7 @@ import cat4 from "../components/profile/posts/post2/img/cat4.png"
 import spaceX from "../img/spaceX.avif"
 import rocket from "../img/rocket.jpg"
 import tesla from "../img/tesla.jpg"
+import {rerenderTree} from "../render.jsx" 
 let state={
     profile_page:{
         post1_data:[
@@ -42,18 +43,20 @@ let state={
 
 export let addPost=(postText)=>{
     let newPost ={
-        text:postText, id:4, likes:0
+        image:tesla, title:"Cars", text:postText, id:4, likes:0
     }
-    state.profile_page.post1_data.push(newPost)
-    console.log(state)
+    state.profile_page.post1_data.unshift(newPost)
+    // state.profile_page.post1_data.push(newPost)
+    rerenderTree(state)
 }
 
 export let addMessage=(dialogsText)=>{
     let newMessage ={
-        text:dialogsText, id:4
+       message:dialogsText, name:"Arisha", id:4
     }
     state.dialogs_page.messages_data.push(newMessage)
-    console.log(state)
+    state.dialogs_page.dialogs_data.push(newMessage)
+    rerenderTree(state)
 }
 
 export default state;

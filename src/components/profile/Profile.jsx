@@ -8,7 +8,7 @@ function Profile(props) {
   let addPost=()=>{
     props.addPost(postText.current.value)
     // alert(document.querySelector("input").value)
-    alert(postText.current.value)
+    // alert(postText.current.value)
   }
     return(
       <div className="profile">

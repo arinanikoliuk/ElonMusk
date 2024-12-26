@@ -1,17 +1,26 @@
-import React from "react"
+import React, {useRef} from "react"
 import "./dialogs.css"
 import DialogsItem from "./dialogsItem/DialogsItem"
 import Messages from "./dialogsMessages/Messages"
-let dialogsText=React.createRef()
-function Dialog(props){
-    let addMessage=()=>{
-        props.addMessage(dialogsText.current.value)
-        alert(dialogsText.current.value)
-    }
+const Dialog=(props)=>{
+    const ref=useRef(null)
+    const addMessage=()=>{
+        if (ref.current){
+            const text=ref.current.value;
+            props.addMessage(text)
+            // alert(ref.current.value)
+        } 
+}
+// let dialogsText=React.createRef()
+// function Dialog(props){
+//     let addMessage=()=>{
+//         props.addMessage(dialogsText.current.value)
+//         alert(dialogsText.current.value)
+//     }
     return(
         <div className="dialogs">
-            <p className="name">{props.name}</p>
-            <p className="answer">{props.answer}</p>
+            {/* <p className="name">{props.name}</p>
+            <p className="answer">{props.answer}</p> */}
             <div className="dialog">
                 <div className="items">
                     {props.dialog.dialogs_data.map((e)=><DialogsItem name={e.name} id={e.id} />)}
@@ -20,7 +29,7 @@ function Dialog(props){
                     {props.dialog.messages_data.map((e)=><Messages message={e.message} id={e.id} />)}
                 </div>
             </div>
-            <input ref={dialogsText} type="text" />
+            <input ref={ref} type="text" />
             <button onClick={addMessage}>Otpravit</button>
         </div>
     )
