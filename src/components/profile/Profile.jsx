@@ -10,13 +10,17 @@ function Profile(props) {
     // alert(document.querySelector("input").value)
     // alert(postText.current.value)
   }
+  let onNewPostText=()=>{
+    props.onNewPostText(postText.current.value)
+  }
+  console.log(props)
     return(
       <div className="profile">
         <Profileinfo/>
           <h2 className="posts-text">My posts</h2>
-          <input ref={postText} placeholder="enter the post" />
+          <input onChange={onNewPostText} value={props.new_post_text} ref={postText} placeholder="enter the post" />
           <button onClick={addPost}>Add post</button>
-        <Posts post_data={props.data.post1_data} addPost={props.addPost}/>
+        <Posts post_data={props.data.post1_data} addPost={props.addPost} new_post_text={props.new_post_text} onNewPostText={props.onNewPostText}/>
         <Posts description_cat={props.data.description_cats} addPost={props.addPost}/>
         {/* <Posts message={props.message} answer={props.answer} name={props.name} /> */}
       </div>

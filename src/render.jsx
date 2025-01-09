@@ -5,12 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {addPost} from "./Data/state"
 import {addMessage} from "./Data/state"
+import {onNewPostText} from "./Data/state"
 export let rerenderTree=(state)=>{
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <React.StrictMode>
       <App 
-        state={state} addPost={addPost} addMessage={addMessage}
+        state={state} onNewPostText={onNewPostText} addPost={addPost} addMessage={addMessage}
       />
     </React.StrictMode>
   )

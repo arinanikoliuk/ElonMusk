@@ -18,7 +18,8 @@ let state={
             {imageSrc: cat3, names:"Serval", description:"African servals are small, slender cats with long legs, a lean body, a short tail, and a small head. Their extra-long neck and legs give them the nickname-giraffe cat", id:2},
             {imageSrc: cat2, names:"Sfinks", description:"Sphynx was developed through selective breeding of these animals, starting in the 1960s. They always have cold", id:3},
             {imageSrc: cat4, names:"Bengal", description:"Bengal cat is a breed of hybrid cat created from crossing of an Asian leopard cat with domestic cats, especially the spotted Egyptian Mau.This cats are very adorable and affectionate", id:1}
-        ]
+        ],
+        new_post_text: "hello friends"
     },
     dialogs_page:{
         dialogs_data:[
@@ -41,11 +42,17 @@ let state={
     }
 }
 
+export let onNewPostText=(text)=>{
+    state.profile_page.new_post_text=text
+    rerenderTree(state)
+}
+
 export let addPost=(postText)=>{
     let newPost ={
         image:tesla, title:"Cars", text:postText, id:4, likes:0
     }
     state.profile_page.post1_data.unshift(newPost)
+    state.profile_page.new_post_text=""
     // state.profile_page.post1_data.push(newPost)
     rerenderTree(state)
 }
