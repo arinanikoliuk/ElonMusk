@@ -6,12 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import {addPost} from "./Data/state"
 import {addMessage} from "./Data/state"
 import {onNewPostText} from "./Data/state"
+import {onNewDialogText} from "./Data/state"
+const root = ReactDOM.createRoot(document.getElementById('root'));
 export let rerenderTree=(state)=>{
-  const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <React.StrictMode>
       <App 
-        state={state} onNewPostText={onNewPostText} addPost={addPost} addMessage={addMessage}
+        state={state} onNewPostText={onNewPostText} onNewDialogText={onNewDialogText} addPost={addPost} addMessage={addMessage}
       />
     </React.StrictMode>
   )

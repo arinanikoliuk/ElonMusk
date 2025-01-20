@@ -31,7 +31,8 @@ let state={
             {message:"Go to Mars", id:1},
             {message:"Where is my chip", id:2},
             {message:"Hello", id:3},
-        ]
+        ],
+        new_dialog_text: "put a message"
     },
     navMenu: {
         friends:[
@@ -40,6 +41,11 @@ let state={
             {ava:cat3, name:"Sophia", id:3},
         ]
     }
+}
+
+export let onNewDialogText=(text)=>{
+    state.dialogs_page.new_dialog_text=text
+    rerenderTree(state)
 }
 
 export let onNewPostText=(text)=>{
@@ -63,6 +69,7 @@ export let addMessage=(dialogsText)=>{
     }
     state.dialogs_page.messages_data.push(newMessage)
     state.dialogs_page.dialogs_data.push(newMessage)
+    state.dialogs_page.new_dialog_text=""
     rerenderTree(state)
 }
 

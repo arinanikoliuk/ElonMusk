@@ -6,11 +6,14 @@ const Dialog=(props)=>{
     const ref=useRef(null)
     const addMessage=()=>{
         if (ref.current){
-            const text=ref.current.value;
-            props.addMessage(text)
+            const dialogsText=ref.current.value;
+            props.addMessage(dialogsText)
             // alert(ref.current.value)
         } 
-}
+    }
+    let onNewDialogText=()=>{
+        props.onNewDialogText(ref.current.value)
+    }
 // let dialogsText=React.createRef()
 // function Dialog(props){
 //     let addMessage=()=>{
@@ -29,7 +32,7 @@ const Dialog=(props)=>{
                     {props.dialog.messages_data.map((e)=><Messages message={e.message} id={e.id} />)}
                 </div>
             </div>
-            <input ref={ref} type="text" />
+            <input onChange={onNewDialogText} value={props.new_dialog_text} ref={ref} type="text" />
             <button onClick={addMessage}>Otpravit</button>
         </div>
     )
