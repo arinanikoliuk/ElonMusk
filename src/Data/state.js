@@ -5,7 +5,7 @@ import cat4 from "../components/profile/posts/post2/img/cat4.png"
 import spaceX from "../img/spaceX.avif"
 import rocket from "../img/rocket.jpg"
 import tesla from "../img/tesla.jpg"
-import {rerenderTree} from "../render.jsx" 
+// import {rerenderTree} from "../index.js" 
 let state={
     profile_page:{
         post1_data:[
@@ -74,3 +74,13 @@ export let addMessage=(dialogsText)=>{
 }
 
 export default state;
+
+let rerenderTree=()=>{
+    console.log("test rerender")
+}
+ 
+export let subscribe=(observer)=>{
+    rerenderTree=observer;
+}
+
+window.state=state
