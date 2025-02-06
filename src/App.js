@@ -14,8 +14,8 @@ function App(props) {
     <Header />
     <NavBar navMenu={props.state.navMenu} />
     <Routes>
-    <Route path="/" element={<Profile data={props.state.profile_page} addPost={props.addPost} new_post_text={props.state.profile_page.new_post_text} onNewPostText={props.onNewPostText}/>} />
-      <Route path="/profile" element={<Profile data={props.state.profile_page} addPost={props.addPost} new_post_text={props.state.profile_page.new_post_text} onNewPostText={props.onNewPostText}/>} />
+    <Route path="/" element={<Profile data={props.state.profile_page} dispatch={props.dispatch} new_post_text={props.state.profile_page.new_post_text}/>} />,
+      <Route path="/profile" element={<Profile data={props.state.profile_page} new_post_text={props.state.profile_page.new_post_text} dispatch={props.dispatch}/>} />,
       <Route path="/dialogs" element={<Dialogs dialog={props.state.dialogs_page} messages_data={props.state.messages_data} addMessage={props.addMessage} new_dialog_text={props.state.dialogs_page.new_dialog_text} onNewDialogText={props.onNewDialogText}/>} />
       <Route path="/feed" element={<Feed />} />
       <Route path="/friends" element={<Friends />} />

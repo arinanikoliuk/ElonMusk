@@ -49,20 +49,20 @@ let store={
         this.rerenderTree(this._state)
     },
     
-    onNewPostText(text){
-        this._state.profile_page.new_post_text=text
-        this.rerenderTree(this._state)
-    },
+    // onNewPostText(text){
+    //     this._state.profile_page.new_post_text=text
+    //     this.rerenderTree(this._state)
+    // },
     
-    addPost(postText){
-        let newPost ={
-            image:tesla, title:"Cars", text:postText, id:4, likes:0
-        }
-        this._state.profile_page.post1_data.unshift(newPost)
-        this._state.profile_page.new_post_text=""
-        // state.profile_page.post1_data.push(newPost)
-        this.rerenderTree(this._state)
-    },
+    // addPost(postText){
+    //     let newPost ={
+    //         image:tesla, title:"Cars", text:postText, id:4, likes:0
+    //     }
+    //     this._state.profile_page.post1_data.unshift(newPost)
+    //     this._state.profile_page.new_post_text=""
+    //     // state.profile_page.post1_data.push(newPost)
+    //     this.rerenderTree(this._state)
+    // },
     
     addMessage(dialogsText){
         let newMessage ={
@@ -85,8 +85,25 @@ let store={
     
     getState(){
         return this._state
+    },
+
+    dispatch(action){
+        if (action.type=="ADD-POST"){
+            let newPost ={
+                image:tesla, title:"Cars", text:this._state.profile_page.new_post_text, id:4, likes:0
+            }
+            this._state.profile_page.post1_data.unshift(newPost)
+            this._state.profile_page.new_post_text=""
+            // state.profile_page.post1_data.push(newPost)
+            this.rerenderTree(this._state)
+        }
+
+        else if(action.type=="NEW-POST"){
+            this._state.profile_page.new_post_text=action.text
+            this.rerenderTree(this._state)
+        }
+
     }
-    // window.state=state
 }
 
 export default store;
