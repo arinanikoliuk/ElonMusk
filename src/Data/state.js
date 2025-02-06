@@ -44,10 +44,10 @@ let store={
         }
     },
     
-    onNewDialogText(text){
-        this._state.dialogs_page.new_dialog_text=text
-        this.rerenderTree(this._state)
-    },
+    // onNewDialogText(text){
+    //     this._state.dialogs_page.new_dialog_text=text
+    //     this.rerenderTree(this._state)
+    // },
     
     // onNewPostText(text){
     //     this._state.profile_page.new_post_text=text
@@ -64,15 +64,15 @@ let store={
     //     this.rerenderTree(this._state)
     // },
     
-    addMessage(dialogsText){
-        let newMessage ={
-           message:dialogsText, name:"Arisha", id:4
-        }
-        this._state.dialogs_page.messages_data.push(newMessage)
-        this._state.dialogs_page.dialogs_data.push(newMessage)
-        this._state.dialogs_page.new_dialog_text=""
-        this.rerenderTree(this._state)
-    },
+    // addMessage(dialogsText){
+    //     let newMessage ={
+    //        message:dialogsText, name:"Arisha", id:4
+    //     }
+    //     this._state.dialogs_page.messages_data.push(newMessage)
+    //     this._state.dialogs_page.dialogs_data.push(newMessage)
+    //     this._state.dialogs_page.new_dialog_text=""
+    //     this.rerenderTree(this._state)
+    // },
     
     
     rerenderTree(){
@@ -88,7 +88,7 @@ let store={
     },
 
     dispatch(action){
-        if (action.type=="ADD-POST"){
+        if (action.type==="ADD-POST"){
             let newPost ={
                 image:tesla, title:"Cars", text:this._state.profile_page.new_post_text, id:4, likes:0
             }
@@ -98,11 +98,25 @@ let store={
             this.rerenderTree(this._state)
         }
 
-        else if(action.type=="NEW-POST"){
+        else if(action.type==="NEW-POST"){
             this._state.profile_page.new_post_text=action.text
             this.rerenderTree(this._state)
         }
 
+        else if(action.type==="ADD-MESSAGE"){
+            let newMessage ={
+                message:this._state.profile_page.dialogsText, name:"Arisha", id:4
+            }
+            this._state.dialogs_page.messages_data.push(newMessage)
+            this._state.dialogs_page.dialogs_data.push(newMessage)
+            this._state.dialogs_page.new_dialog_text=""
+            this.rerenderTree(this._state)
+        }
+
+        else if(action.type==="NEW-DIALOG-TEXT"){
+            this._state.dialogs_page.new_dialog_text=action.text
+            this.rerenderTree(this._state)
+        }
     }
 }
 

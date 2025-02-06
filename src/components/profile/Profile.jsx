@@ -6,12 +6,12 @@ import Profileinfo from "./profileinfo/Profileinfo"
 let postText=React.createRef()
 function Profile(props) {
   let addPost=()=>{
-    props.dispatch({type:"ADD_POST"})
+    props.dispatch({type:"ADD-POST"})
     // alert(document.querySelector("input").value)
     // alert(postText.current.value)
   }
   let onNewPostText=()=>{
-    props.dispatch({type:"NEW_POST",text:postText.current.value})
+    props.dispatch({type:"NEW-POST",text:postText.current.value})
   }
   console.log(props)
     return(

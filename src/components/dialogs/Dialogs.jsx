@@ -7,12 +7,12 @@ const Dialog=(props)=>{
     const addMessage=()=>{
         if (ref.current){
             const dialogsText=ref.current.value;
-            props.addMessage(dialogsText)
+            props.dispatch({type:"ADD-MESSAGE", dialogsText})
             // alert(ref.current.value)
         } 
     }
     let onNewDialogText=()=>{
-        props.onNewDialogText(ref.current.value)
+        props.dispatch({type:"NEW-DIALOG-TEXT"})
     }
 // let dialogsText=React.createRef()
 // function Dialog(props){

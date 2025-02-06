@@ -10,7 +10,7 @@ export let rerenderTree=(state)=>{
   root.render(
     <React.StrictMode>
       <App 
-        state={state} dispatch={store.dispatch.bind(store)} onNewDialogText={store.onNewDialogText.bind(store)} addMessage={store.addMessage.bind(store)}
+        state={state} dispatch={store.dispatch.bind(store)}
       />
     </React.StrictMode>
   )
